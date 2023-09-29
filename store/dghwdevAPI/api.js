@@ -12,6 +12,24 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return dghwdevAPI.post(`/api/v1/signup/`, payload)
 }
+function api_v1_xcdsfs_list(payload) {
+  return dghwdevAPI.get(`/api/v1/xcdsfs/`)
+}
+function api_v1_xcdsfs_create(payload) {
+  return dghwdevAPI.post(`/api/v1/xcdsfs/`, payload)
+}
+function api_v1_xcdsfs_retrieve(payload) {
+  return dghwdevAPI.get(`/api/v1/xcdsfs/${payload.id}/`)
+}
+function api_v1_xcdsfs_update(payload) {
+  return dghwdevAPI.put(`/api/v1/xcdsfs/${payload.id}/`, payload)
+}
+function api_v1_xcdsfs_partial_update(payload) {
+  return dghwdevAPI.patch(`/api/v1/xcdsfs/${payload.id}/`, payload)
+}
+function api_v1_xcdsfs_destroy(payload) {
+  return dghwdevAPI.delete(`/api/v1/xcdsfs/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return dghwdevAPI.post(`/rest-auth/login/`, payload)
 }
@@ -49,6 +67,12 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_xcdsfs_list,
+  api_v1_xcdsfs_create,
+  api_v1_xcdsfs_retrieve,
+  api_v1_xcdsfs_update,
+  api_v1_xcdsfs_partial_update,
+  api_v1_xcdsfs_destroy,
   rest_auth_login_create,
   rest_auth_logout_create,
   rest_auth_password_change_create,
